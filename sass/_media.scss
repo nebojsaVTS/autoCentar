@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+@media (max-width: 1000px) {
+    .cars {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sellers .locations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cars form .dream-car {
+        flex-direction: column;
+    }
+
+    .offers div {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
