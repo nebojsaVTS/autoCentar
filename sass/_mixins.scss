@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+@use 'variables' as *;
+
+// Mixin za centralizovan kontejner
+@mixin container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+// Fleks mixin (olakšava centriranje i raspored)
+@mixin flex($justify: center, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Hover underline efekat
+@mixin hover-underline($underline-color: $color-gold-brown) {
+  position: relative;
+  transition: color .2s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: $underline-color;
+    transition: width .25s ease;
+  }
+
+  &:hover {
+    color: $color-gold-brown;
+    &::after { width: 100%; }
+  }
+}
